@@ -1,0 +1,54 @@
+contra_id,condition,drug,warning,severity,reference
+DC001,Asthma,Aspirin,Can trigger severe asthma attacks,HIGH,Mayo Clinic
+DC002,Diabetes,Prednisone,Raises blood glucose,HIGH,Mayo Clinic
+DC003,Hypertension,Ibuprofen,Increases blood pressure,MEDIUM,Mayo Clinic
+DC004,Heart Disease,Diclofenac,Increases risk of heart attack,HIGH,Mayo Clinic
+DC005,Kidney Disease,NSAIDs,Worsens kidney function,HIGH,Mayo Clinic
+DC006,Liver Disease,Paracetamol,Risk of liver toxicity,HIGH,Mayo Clinic
+DC007,Pregnancy,Isotretinoin,Severe birth defects,HIGH,Mayo Clinic
+DC008,Glaucoma,Antihistamines,Raises eye pressure,MEDIUM,Mayo Clinic
+DC009,Peptic Ulcer,Aspirin,Causes bleeding,HIGH,Mayo Clinic
+DC010,Heart Failure,NSAIDs,Fluid retention and worsening,HIGH,Mayo Clinic
+DC011,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC012,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC013,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC014,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC015,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC016,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC017,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC018,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC019,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC020,Asthma,Aspirin,Can trigger severe asthma attacks and bronchospasm,HIGH,Mayo Clinic
+DC021,Heart Disease,Ibuprofen,Significantly increases risk of heart attack and stroke,HIGH,Mayo Clinic
+DC022,Diabetes,Aspirin,May affect blood sugar regulation in diabetic patients,MEDIUM,Mayo Clinic
+DC020,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC021,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC022,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC023,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC024,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC025,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC026,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC027,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC028,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC029,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC030,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC031,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC032,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC033,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC034,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC035,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC036,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC037,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC038,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC039,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC040,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC041,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC042,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC043,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC044,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC045,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC046,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC047,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC048,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC049,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic
+DC050,Hypertension,Decongestants,Raises blood pressure,MEDIUM,Mayo Clinic

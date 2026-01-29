@@ -101,7 +101,7 @@ const Home = ({ serverStatus }) => {
 
           <div style={{ display: 'flex', flexDirection: 'column' }}>
 
-            <h2 style={{ fontSize: '3.5rem', margin: '0 0 20px 0', lineHeight: '1.1', fontWeight: '800', color: 'var(--color-primary-dark)' }}>
+            <h2 style={{ fontSize: '3.5rem', margin: '0 0 5px 0', lineHeight: '1.1', fontWeight: '800', color: 'var(--color-primary-dark)' }}>
               Right Information.<br />in the Right Hands.<br />at the Right Time.
             </h2>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '500px' }}>

@@ -1,0 +1,12 @@
+abha_id,patient_id,name,age,gender,blood_group,hospital_name,phone
+ABHA001,HOSP1_P001,Ravi Kumar,42,Male,O+,Apollo Hospital,9876543210
+ABHA002,HOSP1_P002,Anita Sharma,29,Female,B+,Apollo Hospital,9123456780
+ABHA003,HOSP2_P011,Arjun Mehta,55,Male,A-,Fortis Hospital,9988776655
+ABHA004,HOSP2_P012,Neha Verma,35,Female,O-,Fortis Hospital,9012345678
+ABHA005,HOSP3_P101,Karan Singh,60,Male,B-,AIIMS,9090909090
+ABHA006,HOSP3_P102,Priya Patel,24,Female,A+,AIIMS,8080808080
+ABHA007,HOSP4_P201,Manoj Das,48,Male,AB+,Manipal Hospital,7777777777
+ABHA008,HOSP4_P202,Sneha Roy,31,Female,O+,Manipal Hospital,6666666666
+ABHA009,HOSP5_P301,Vikram Iyer,67,Male,A+,Narayana Health,5555555555
+ABHA010,HOSP5_P302,Pooja Nair,40,Female,B+,Narayana Health,4444444444
+ABHA011,HOSP6_P401,Rajesh Gupta,58,Male,AB-,Max Hospital,9998887776

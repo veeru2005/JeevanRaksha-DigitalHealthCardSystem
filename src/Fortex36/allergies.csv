@@ -1,0 +1,13 @@
+allergy_id,abha_id,allergy_type,substance,severity,first_detected
+A001,ABHA001,Drug,Penicillin,Severe,2010-06-15
+A002,ABHA001,Food,Shellfish,Moderate,2015-08-20
+A003,ABHA002,Food,Peanuts,Moderate,2018-03-22
+A004,ABHA003,Drug,Aspirin,Mild,2005-09-10
+A005,ABHA005,Food,Seafood,Severe,1999-07-19
+A006,ABHA007,Drug,Sulfa Drugs,Severe,2012-08-14
+A007,ABHA007,Drug,Ibuprofen,Moderate,2019-04-11
+A008,ABHA009,Drug,Warfarin,Severe,2017-04-21
+A009,ABHA010,Drug,Penicillin,Moderate,2013-12-12
+A010,ABHA011,Drug,Penicillin,Severe,2015-06-10
+A011,ABHA011,Food,Shellfish,Moderate,2018-09-22
+A012,ABHA011,Drug,Sulfa Drugs,Severe,2020-03-14

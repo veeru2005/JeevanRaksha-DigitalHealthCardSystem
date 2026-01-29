@@ -1,0 +1,30 @@
+prescription_id,abha_id,drug,dose,frequency,start_date,end_date,status
+PR001,ABHA001,Metformin,500mg,2/day,2025-12-01,,Active
+PR002,ABHA001,Amlodipine,5mg,1/day,2021-03-10,,Active
+PR003,ABHA001,Amoxicillin,250mg,3/day,2026-01-10,2026-01-17,Temporary
+
+PR004,ABHA002,Salbutamol,2 puffs,As needed,2020-01-01,,Active
+
+PR005,ABHA003,Warfarin,5mg,1/day,2018-05-01,,Active
+PR006,ABHA003,Aspirin,75mg,1/day,2026-01-05,2026-01-12,Temporary
+
+PR007,ABHA004,Levothyroxine,50mcg,1/day,2020-03-01,,Active
+
+PR008,ABHA005,Aspirin,75mg,1/day,2011-01-01,,Active
+PR009,ABHA005,Atorvastatin,20mg,1/day,2012-06-01,,Active
+
+PR010,ABHA006,Iron Supplements,100mg,1/day,2024-11-01,2026-02-01,Temporary
+
+PR011,ABHA007,Insulin,10 units,2/day,2016-06-01,,Active
+
+PR012,ABHA008,Sumatriptan,50mg,As needed,2022-08-01,,Active
+
+PR013,ABHA011,Warfarin,5mg,1/day,2016-11-01,,Active
+PR014,ABHA011,Aspirin,100mg,1/day,2017-02-15,,Active
+PR015,ABHA011,Ibuprofen,400mg,3/day,2025-12-20,2026-01-20,Active
+PR016,ABHA011,Clopidogrel,75mg,1/day,2018-06-01,,Active
+PR017,ABHA011,Metformin,850mg,2/day,2019-08-01,,Active
+
+PR013,ABHA009,Ibuprofen,400mg,2/day,2026-01-05,2026-01-12,Temporary
+
+PR014,ABHA010,Metformin,500mg,2/day,2022-01-01,,Active

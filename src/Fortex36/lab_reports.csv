@@ -1,0 +1,18 @@
+report_id,abha_id,test_name,value,unit,status,test_date,report_date
+L001,ABHA001,Creatinine,2.1,mg/dL,High,2026-01-12,2026-01-13
+L002,ABHA001,Blood Sugar Fasting,160,mg/dL,High,2026-01-12,2026-01-12
+
+L003,ABHA002,Peak Flow,350,L/min,Low,2026-01-11,2026-01-11
+
+L004,ABHA003,Blood Pressure,160/100,mmHg,High,2026-01-10,2026-01-10
+
+L005,ABHA004,TSH,8.5,µIU/mL,High,2026-01-09,2026-01-09
+
+L006,ABHA005,ECG,Abnormal,,Critical,2026-01-08,2026-01-08
+L007,ABHA005,Cholesterol,280,mg/dL,High,2026-01-08,2026-01-08
+
+L008,ABHA006,Hemoglobin,9,g/dL,Low,2026-01-07,2026-01-07
+
+L009,ABHA007,HbA1c,9.2,%,High,2026-01-06,2026-01-06
+
+L010,ABHA009,CRP,12,mg/L,High,2026-01-04,2026-01-04

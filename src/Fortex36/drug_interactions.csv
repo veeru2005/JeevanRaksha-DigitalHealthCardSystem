@@ -1,0 +1,53 @@
+interaction_id,drug1,drug2,risk,severity,reference
+DI001,Aspirin,Warfarin,Severely increases bleeding risk,HIGH,DrugBank
+DI002,Ibuprofen,Warfarin,High risk of gastrointestinal bleeding,HIGH,DrugBank
+DI003,Amoxicillin,Warfarin,Enhances anticoagulant effect,MEDIUM,DrugBank
+DI004,Clopidogrel,Aspirin,Excessive bleeding risk,HIGH,DrugBank
+DI005,Metformin,Insulin,May cause hypoglycemia if doses not adjusted,MEDIUM,DrugBank
+DI006,Paracetamol,Warfarin,Increases INR with long-term use,MEDIUM,DrugBank
+DI007,Fluconazole,Warfarin,Strongly increases bleeding risk,HIGH,DrugBank
+DI008,Ciprofloxacin,Warfarin,Increases anticoagulant effect,HIGH,DrugBank
+DI009,Heparin,Warfarin,Severe bleeding risk,HIGH,DrugBank
+DI010,Aspirin,Ibuprofen,Reduces cardioprotective effect of aspirin,LOW,DrugBank
+DI011,Digoxin,Verapamil,Increases digoxin levels,HIGH,DrugBank
+DI012,Digoxin,Amiodarone,Raises digoxin toxicity,HIGH,DrugBank
+DI013,Statins,Clarithromycin,Risk of muscle toxicity,HIGH,DrugBank
+DI014,Statins,Erythromycin,Risk of rhabdomyolysis,HIGH,DrugBank
+DI015,ACE Inhibitors,Potassium Supplements,Risk of hyperkalemia,HIGH,DrugBank
+DI016,Spironolactone,Potassium Supplements,Severe hyperkalemia risk,HIGH,DrugBank
+DI017,Benzodiazepines,Opioids,Respiratory depression risk,HIGH,DrugBank
+DI018,SSRIs,NSAIDs,Increased bleeding risk,MEDIUM,DrugBank
+DI019,Theophylline,Ciprofloxacin,Increases theophylline toxicity,HIGH,DrugBank
+DI020,Warfarin,Clopidogrel,Extreme bleeding risk - life threatening,HIGH,DrugBank
+DI021,Aspirin,Clopidogrel,Excessive bleeding risk,HIGH,DrugBank
+DI020,Lithium,NSAIDs,Increases lithium levels,HIGH,DrugBank
+DI021,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI022,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI023,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI024,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI025,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI026,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI027,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI028,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI029,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI030,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI031,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI032,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI033,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI034,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI035,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI036,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI037,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI038,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI039,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI040,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI041,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI042,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI043,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI044,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI045,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI046,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI047,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI048,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI049,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank
+DI050,Aspirin,Heparin,Severe bleeding risk,HIGH,DrugBank

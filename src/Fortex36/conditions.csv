@@ -1,0 +1,17 @@
+condition_id,abha_id,condition,chronic,since,status
+C001,ABHA001,Diabetes,Yes,2019,Ongoing
+C002,ABHA001,Hypertension,Yes,2021,Ongoing
+C003,ABHA002,Asthma,Yes,2015,Ongoing
+C004,ABHA003,Hypertension,Yes,2018,Ongoing
+C005,ABHA004,Thyroid,Yes,2020,Ongoing
+C006,ABHA005,Heart Disease,Yes,2010,Ongoing
+C007,ABHA005,High Cholesterol,Yes,2012,Ongoing
+C008,ABHA006,Anemia,No,2024,Recovering
+C009,ABHA007,Diabetes,Yes,2016,Ongoing
+C010,ABHA008,Migraine,No,2022,Active
+C011,ABHA009,Arthritis,Yes,2014,Ongoing
+C012,ABHA010,PCOS,Yes,2021,Ongoing
+C013,ABHA011,Heart Disease,Yes,2016,Ongoing
+C014,ABHA011,Hypertension,Yes,2017,Ongoing
+C015,ABHA011,Diabetes,Yes,2019,Ongoing
+C016,ABHA011,Asthma,Yes,2020,Ongoing
