@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:5001/api';
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
 
 const DrivingLicenceRegistration = () => {
     const navigate = useNavigate();
@@ -19,12 +19,12 @@ const DrivingLicenceRegistration = () => {
     const handleVerify = (e) => {
         e.preventDefault();
         setError('');
-        
+
         if (!dlNumber || !dob) {
             setError('Please fill in all fields');
             return;
         }
-        
+
         // Simulate DL verification
         setIsProcessing(true);
         setTimeout(() => {
@@ -42,17 +42,17 @@ const DrivingLicenceRegistration = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-        
+
         if (!fullName || !email || !password || !confirmPassword) {
             setError('Please fill in all required fields');
             return;
         }
-        
+
         if (password.length < 6) {
             setError('Password must be at least 6 characters');
             return;
         }
-        
+
         if (password !== confirmPassword) {
             setError('Passwords do not match');
             return;
@@ -76,7 +76,7 @@ const DrivingLicenceRegistration = () => {
             });
 
             const data = await response.json();
-            
+
             if (data.success) {
                 const patientId = data.data.patientId;
                 const confirmed = window.confirm(
@@ -86,7 +86,7 @@ const DrivingLicenceRegistration = () => {
                     `Click OK to view your Digital Medical ID and QR Code.\n` +
                     `Click Cancel to go to homepage.`
                 );
-                
+
                 if (confirmed) {
                     navigate(`/qr-code/${patientId}`);
                 } else {
@@ -108,11 +108,11 @@ const DrivingLicenceRegistration = () => {
             <div className="container" style={{ width: '100%', maxWidth: '600px' }}>
                 <div className="card">
                     {error && (
-                        <div style={{ 
-                            padding: '15px', 
-                            marginBottom: '20px', 
-                            backgroundColor: '#fee', 
-                            color: '#c00', 
+                        <div style={{
+                            padding: '15px',
+                            marginBottom: '20px',
+                            backgroundColor: '#fee',
+                            color: '#c00',
                             borderRadius: '8px',
                             border: '1px solid #fcc',
                             fontFamily: 'Quicksand, sans-serif',
@@ -121,7 +121,7 @@ const DrivingLicenceRegistration = () => {
                             {error}
                         </div>
                     )}
-                    
+
                     <div style={{ textAlign: 'center', marginBottom: '30px', fontFamily: 'Quicksand, sans-serif' }}>
                         <h2 style={{ color: 'var(--color-primary-dark)', fontFamily: 'Quicksand, sans-serif', margin: '0 0 10px 0' }}>
                             {step === 1 ? 'Driving Licence Verification' : 'Complete Registration'}
@@ -131,150 +131,150 @@ const DrivingLicenceRegistration = () => {
                         </p>
                     </div>
 
-                {step === 1 ? (
-                    <form onSubmit={handleVerify}>
-                        <div style={{ marginBottom: '20px' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
-                                Driving Licence Number <span style={{ color: 'red' }}>*</span>
-                            </label>
-                            <input
-                                type="text"
-                                placeholder="DL-1420110012345"
-                                value={dlNumber}
-                                onChange={(e) => setDlNumber(e.target.value.toUpperCase())}
-                                style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
-                                required
-                            />
-                            <span style={{ fontSize: '0.8rem', color: '#888', fontFamily: 'Quicksand, sans-serif', display: 'block', marginTop: '5px' }}>Format: DL-1420110012345 or similar</span>
-                        </div>
+                    {step === 1 ? (
+                        <form onSubmit={handleVerify}>
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
+                                    Driving Licence Number <span style={{ color: 'red' }}>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    placeholder="DL-1420110012345"
+                                    value={dlNumber}
+                                    onChange={(e) => setDlNumber(e.target.value.toUpperCase())}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
+                                    required
+                                />
+                                <span style={{ fontSize: '0.8rem', color: '#888', fontFamily: 'Quicksand, sans-serif', display: 'block', marginTop: '5px' }}>Format: DL-1420110012345 or similar</span>
+                            </div>
 
-                        <div style={{ marginBottom: '30px' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
-                                Date of Birth <span style={{ color: 'red' }}>*</span>
-                            </label>
-                            <input
-                                type="date"
-                                value={dob}
-                                onChange={(e) => setDob(e.target.value)}
-                                style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
-                                required
-                            />
-                        </div>
+                            <div style={{ marginBottom: '30px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
+                                    Date of Birth <span style={{ color: 'red' }}>*</span>
+                                </label>
+                                <input
+                                    type="date"
+                                    value={dob}
+                                    onChange={(e) => setDob(e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
+                                    required
+                                />
+                            </div>
 
-                        <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                            <button
-                                type="button"
-                                className="btn btn-outline"
-                                style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
-                                onClick={() => navigate('/register')}
-                            >
-                                Cancel
-                            </button>
-                            <button
-                                type="submit"
-                                className="btn btn-primary"
-                                style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
-                                disabled={isProcessing}
-                            >
-                                {isProcessing ? 'Verifying...' : 'Verify & Continue'}
-                            </button>
-                        </div>
-                    </form>
-                ) : (
-                    <form onSubmit={handleSubmit}>
-                        <p style={{ color: 'green', marginBottom: '20px', fontWeight: '600', fontFamily: 'Quicksand, sans-serif', textAlign: 'center' }}>
-                            ✓ Driving Licence Verified: {fullName}
-                        </p>
-                        
-                        <div style={{ marginBottom: '20px' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
-                                Full Name <span style={{ color: 'red' }}>*</span>
-                            </label>
-                            <input
-                                type="text"
-                                value={fullName}
-                                onChange={(e) => setFullName(e.target.value)}
-                                style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
-                                required
-                            />
-                        </div>
-
-                        <div style={{ marginBottom: '20px', padding: '15px', background: '#f0f9ff', borderRadius: '8px', border: '1px solid #bfdbfe' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif', color: '#1e40af' }}>
-                                📱 Mobile Number (from Driving Licence)
-                            </label>
-                            <p style={{ margin: 0, fontFamily: 'Quicksand, sans-serif', fontSize: '1.1rem', fontWeight: '600', color: '#1e40af' }}>
-                                +91 {mobileNumber}
+                            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                                <button
+                                    type="button"
+                                    className="btn btn-outline"
+                                    style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
+                                    onClick={() => navigate('/register')}
+                                >
+                                    Cancel
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary"
+                                    style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
+                                    disabled={isProcessing}
+                                >
+                                    {isProcessing ? 'Verifying...' : 'Verify & Continue'}
+                                </button>
+                            </div>
+                        </form>
+                    ) : (
+                        <form onSubmit={handleSubmit}>
+                            <p style={{ color: 'green', marginBottom: '20px', fontWeight: '600', fontFamily: 'Quicksand, sans-serif', textAlign: 'center' }}>
+                                ✓ Driving Licence Verified: {fullName}
                             </p>
-                        </div>
 
-                        <div style={{ marginBottom: '20px' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
-                                Email Address <span style={{ color: 'red' }}>*</span>
-                            </label>
-                            <input
-                                type="email"
-                                placeholder="name@example.com"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
-                                required
-                            />
-                            <span style={{ fontSize: '0.8rem', color: '#666', fontFamily: 'Quicksand, sans-serif', display: 'block', marginTop: '5px' }}>
-                                This will be used for login
-                            </span>
-                        </div>
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
+                                    Full Name <span style={{ color: 'red' }}>*</span>
+                                </label>
+                                <input
+                                    type="text"
+                                    value={fullName}
+                                    onChange={(e) => setFullName(e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
+                                    required
+                                />
+                            </div>
 
-                        <div style={{ marginBottom: '20px' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
-                                Create Password <span style={{ color: 'red' }}>*</span>
-                            </label>
-                            <input
-                                type="password"
-                                placeholder="Minimum 6 characters"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
-                                minLength="6"
-                                required
-                            />
-                        </div>
+                            <div style={{ marginBottom: '20px', padding: '15px', background: '#f0f9ff', borderRadius: '8px', border: '1px solid #bfdbfe' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif', color: '#1e40af' }}>
+                                    📱 Mobile Number (from Driving Licence)
+                                </label>
+                                <p style={{ margin: 0, fontFamily: 'Quicksand, sans-serif', fontSize: '1.1rem', fontWeight: '600', color: '#1e40af' }}>
+                                    +91 {mobileNumber}
+                                </p>
+                            </div>
 
-                        <div style={{ marginBottom: '30px' }}>
-                            <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
-                                Confirm Password <span style={{ color: 'red' }}>*</span>
-                            </label>
-                            <input
-                                type="password"
-                                placeholder="Re-enter password"
-                                value={confirmPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
-                                minLength="6"
-                                required
-                            />
-                        </div>
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
+                                    Email Address <span style={{ color: 'red' }}>*</span>
+                                </label>
+                                <input
+                                    type="email"
+                                    placeholder="name@example.com"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
+                                    required
+                                />
+                                <span style={{ fontSize: '0.8rem', color: '#666', fontFamily: 'Quicksand, sans-serif', display: 'block', marginTop: '5px' }}>
+                                    This will be used for login
+                                </span>
+                            </div>
 
-                        <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                            <button
-                                type="button"
-                                className="btn btn-outline"
-                                style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
-                                onClick={() => setStep(1)}
-                            >
-                                Back
-                            </button>
-                            <button
-                                type="submit"
-                                className="btn btn-primary"
-                                style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
-                                disabled={isProcessing}
-                            >
-                                {isProcessing ? 'Registering...' : 'Complete Registration'}
-                            </button>
-                        </div>
-                    </form>
-                )}
+                            <div style={{ marginBottom: '20px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
+                                    Create Password <span style={{ color: 'red' }}>*</span>
+                                </label>
+                                <input
+                                    type="password"
+                                    placeholder="Minimum 6 characters"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
+                                    minLength="6"
+                                    required
+                                />
+                            </div>
+
+                            <div style={{ marginBottom: '30px' }}>
+                                <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
+                                    Confirm Password <span style={{ color: 'red' }}>*</span>
+                                </label>
+                                <input
+                                    type="password"
+                                    placeholder="Re-enter password"
+                                    value={confirmPassword}
+                                    onChange={(e) => setConfirmPassword(e.target.value)}
+                                    style={{ width: '100%', padding: '12px', borderRadius: '6px', border: '1px solid #ccc', fontSize: '1rem', fontFamily: 'Quicksand, sans-serif', boxSizing: 'border-box' }}
+                                    minLength="6"
+                                    required
+                                />
+                            </div>
+
+                            <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                                <button
+                                    type="button"
+                                    className="btn btn-outline"
+                                    style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
+                                    onClick={() => setStep(1)}
+                                >
+                                    Back
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary"
+                                    style={{ flex: '1 1 120px', minWidth: '120px', fontFamily: 'Quicksand, sans-serif' }}
+                                    disabled={isProcessing}
+                                >
+                                    {isProcessing ? 'Registering...' : 'Complete Registration'}
+                                </button>
+                            </div>
+                        </form>
+                    )}
                 </div>
             </div>
         </div>

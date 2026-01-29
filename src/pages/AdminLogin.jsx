@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:5001';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const AdminLogin = () => {
     const navigate = useNavigate();
@@ -80,13 +80,13 @@ const AdminLogin = () => {
             }}>
                 {/* Logo and Title */}
                 <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                    <img 
-                        src="/Logo.png" 
-                        alt="JeevanRaksha Logo" 
+                    <img
+                        src="/Logo.png"
+                        alt="JeevanRaksha Logo"
                         style={{ height: '70px', marginBottom: '20px' }}
                     />
-                    <h1 style={{ 
-                        fontSize: '2rem', 
+                    <h1 style={{
+                        fontSize: '2rem',
                         fontWeight: '700',
                         color: '#667eea',
                         marginBottom: '10px'
@@ -162,14 +162,14 @@ const AdminLogin = () => {
                             required
                             placeholder="Enter your password"
                             style={{
-                                  width: '100%',
-                                  padding: '14px',
-                                  border: '2px solid #ddd',
-                                  borderRadius: '8px',
-                                  fontSize: '1rem',
-                                  fontFamily: 'Quicksand, sans-serif',
-                                  transition: 'border-color 0.3s',
-                                  boxSizing: 'border-box'
+                                width: '100%',
+                                padding: '14px',
+                                border: '2px solid #ddd',
+                                borderRadius: '8px',
+                                fontSize: '1rem',
+                                fontFamily: 'Quicksand, sans-serif',
+                                transition: 'border-color 0.3s',
+                                boxSizing: 'border-box'
                             }}
                             onFocus={(e) => e.target.style.borderColor = '#667eea'}
                             onBlur={(e) => e.target.style.borderColor = '#ddd'}

@@ -102,7 +102,7 @@ const Home = ({ serverStatus }) => {
           <div style={{ display: 'flex', flexDirection: 'column' }}>
 
             <h2 style={{ fontSize: '3.5rem', margin: '0 0 5px 0', lineHeight: '1.1', fontWeight: '800', color: 'var(--color-primary-dark)' }}>
-              Right Information.<br />in the Right Hands.<br />at the Right Time.
+              Right Information.<br />to the Right Hands.<br />at the Right Time.
             </h2>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '500px' }}>
               JeevanRaksha: Your Digital Medical Guardian. During critical emergencies, up to 30% of treatment errors occur because doctors don't know a patient's medical history. JeevanRaksha solves this by providing instant, secure access to vital health data—even when the patient is unconscious or the phone is locked.            </p>
@@ -202,7 +202,7 @@ function App() {
 
   useEffect(() => {
     // Check backend health (updated port to 5001)
-    fetch('http://localhost:5001/api/health')
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/api/health`)
       .then(res => res.json())
       .then(data => setServerStatus(data.status))
       .catch((err) => {

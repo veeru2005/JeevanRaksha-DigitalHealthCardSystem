@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:5001/api';
+const API_BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/api`;
 
 const AadhaarRegistration = () => {
     const navigate = useNavigate();
@@ -55,7 +55,7 @@ const AadhaarRegistration = () => {
 
     const handleNext = async () => {
         setError('');
-        
+
         if (step === 1) {
             const aadhaarNumber = aadhaar.join('');
             if (aadhaarNumber.length !== 12) {
@@ -98,7 +98,7 @@ const AadhaarRegistration = () => {
                 setError("Passwords do not match");
                 return;
             }
-            
+
             setLoading(true);
             try {
                 const response = await fetch(`${API_BASE_URL}/register/aadhaar`, {
@@ -118,16 +118,16 @@ const AadhaarRegistration = () => {
                 });
 
                 const data = await response.json();
-                
+
                 if (data.success) {
                     const patientId = data.data.patientId;
-                    
+
                     // Auto-login: Store patient info
                     localStorage.setItem('patientToken', data.data.token);
                     localStorage.setItem('patientId', patientId);
                     localStorage.setItem('patientName', data.data.fullName);
                     localStorage.setItem('patientEmail', data.data.email);
-                    
+
                     // If superadmin, also try to get admin token
                     if (data.data.isSuperadmin) {
                         try {
@@ -148,7 +148,7 @@ const AadhaarRegistration = () => {
                             console.log('Admin login after registration failed:', e);
                         }
                     }
-                    
+
                     setToast({
                         show: true,
                         patientId: patientId,
@@ -250,11 +250,11 @@ const AadhaarRegistration = () => {
 
             {/* Error Display */}
             {error && (
-                <div style={{ 
-                    padding: '15px', 
-                    marginBottom: '20px', 
-                    backgroundColor: '#fee', 
-                    color: '#c00', 
+                <div style={{
+                    padding: '15px',
+                    marginBottom: '20px',
+                    backgroundColor: '#fee',
+                    color: '#c00',
                     borderRadius: '8px',
                     border: '1px solid #fcc',
                     fontFamily: 'Quicksand, sans-serif'
@@ -262,7 +262,7 @@ const AadhaarRegistration = () => {
                     {error}
                 </div>
             )}
-            
+
             {/* Stepper Header */}
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px', position: 'relative', fontFamily: 'Quicksand, sans-serif' }}>
                 <div style={{ position: 'absolute', top: '15px', left: '0', height: '2px', backgroundColor: '#e0e0e0', width: '100%', zIndex: 0 }}></div>
@@ -351,12 +351,12 @@ const AadhaarRegistration = () => {
                                 <span style={{ fontSize: '1.1rem', fontWeight: 'bold', letterSpacing: '2px', fontFamily: 'Quicksand, sans-serif' }}>
                                     {captcha.num1} + {captcha.num2} = ?
                                 </span>
-                                <input 
-                                    type="number" 
+                                <input
+                                    type="number"
                                     value={captchaInput}
                                     onChange={(e) => setCaptchaInput(e.target.value)}
-                                    style={{ padding: '8px', width: '70px', fontFamily: 'Quicksand, sans-serif', borderRadius: '4px', border: '1px solid #ddd' }} 
-                                    placeholder="Ans" 
+                                    style={{ padding: '8px', width: '70px', fontFamily: 'Quicksand, sans-serif', borderRadius: '4px', border: '1px solid #ddd' }}
+                                    placeholder="Ans"
                                 />
                                 <button
                                     type="button"
@@ -392,12 +392,12 @@ const AadhaarRegistration = () => {
                                     }
                                 }}
                                 placeholder="Enter 6-digit OTP"
-                                style={{ 
-                                    width: '100%', 
-                                    padding: '12px', 
-                                    border: '1px solid #ddd', 
-                                    borderRadius: '8px', 
-                                    fontSize: '1.1rem', 
+                                style={{
+                                    width: '100%',
+                                    padding: '12px',
+                                    border: '1px solid #ddd',
+                                    borderRadius: '8px',
+                                    fontSize: '1.1rem',
                                     letterSpacing: '8px',
                                     textAlign: 'center',
                                     fontFamily: 'Quicksand, sans-serif'
@@ -413,18 +413,18 @@ const AadhaarRegistration = () => {
                         <p style={{ color: 'green', marginBottom: '20px', fontWeight: '600', textAlign: 'left', fontFamily: 'Quicksand, sans-serif' }}>
                             ✓ Aadhaar Verified Successfully: {fullName}
                         </p>
-                        <p style={{ 
-                            fontSize: '0.9rem', 
-                            color: '#666', 
-                            marginBottom: '20px', 
-                            backgroundColor: '#e8f5e9', 
-                            padding: '12px', 
+                        <p style={{
+                            fontSize: '0.9rem',
+                            color: '#666',
+                            marginBottom: '20px',
+                            backgroundColor: '#e8f5e9',
+                            padding: '12px',
                             borderRadius: '6px',
                             border: '1px solid #a5d6a7'
                         }}>
                             📱 Mobile Number (from Aadhaar): <strong>+91 {mobileNumber}</strong>
                         </p>
-                        
+
                         <div style={{ marginBottom: '20px' }}>
                             <label style={{ display: 'block', marginBottom: '8px', textAlign: 'left', fontWeight: '500', fontFamily: 'Quicksand, sans-serif' }}>
                                 Email Address <span style={{ color: 'red' }}>*</span>
@@ -440,7 +440,7 @@ const AadhaarRegistration = () => {
                                 This will be used for login and important notifications
                             </p>
                         </div>
-                        
+
                         <div style={{ marginBottom: '20px' }}>
                             <label style={{ display: 'block', marginBottom: '8px', textAlign: 'left', fontWeight: '500', fontFamily: 'Quicksand, sans-serif' }}>
                                 Create Password <span style={{ color: 'red' }}>*</span>
@@ -453,7 +453,7 @@ const AadhaarRegistration = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        
+
                         <div style={{ marginBottom: '20px' }}>
                             <label style={{ display: 'block', marginBottom: '8px', textAlign: 'left', fontWeight: '500', fontFamily: 'Quicksand, sans-serif' }}>
                                 Confirm Password <span style={{ color: 'red' }}>*</span>
