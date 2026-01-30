@@ -225,15 +225,15 @@ function AppContent({ serverStatus }) {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   // Scroll to top when route changes or on refresh to ensure pages load from start
+  // Scroll to top when route changes or on refresh
   useEffect(() => {
-    try {
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-      // some browsers may need documentElement/body reset
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    } catch (err) {
-      // ignore
+    // Disable browser's default scroll restoration to ensure we always start at top
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
     }
+
+    // scroll to top immediate
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   // Check if user is logged in
