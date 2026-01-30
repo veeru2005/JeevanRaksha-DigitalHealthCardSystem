@@ -77,7 +77,7 @@ const Home = ({ serverStatus }) => {
   return (
     <>
       {/* Hero Section */}
-      <section style={{ padding: '60px 0', backgroundColor: 'var(--bg-cream)', minHeight: '60vh', display: 'flex', alignItems: 'flex-start' }}>
+      <section style={{ padding: '40px 0', backgroundColor: 'var(--bg-cream)', minHeight: '60vh', display: 'flex', alignItems: 'flex-start' }}>
         <div className="container grid" style={{ gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
           {/* Pill across both columns, centered */}
           <div style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
